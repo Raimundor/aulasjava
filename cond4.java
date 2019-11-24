@@ -5,19 +5,22 @@ public class cond4 {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		int hora, hora2, soma;
+		int ini, fim, duracao;
 		
-		hora = sc.nextInt();
-		hora2 = sc.nextInt();
+		System.out.println("Hora inicial: ");
+		ini = sc.nextInt();
+		System.out.println("Hora final: ");
+		fim = sc.nextInt();
 		
-		if (hora < 12) {
-			soma = hora + hora2;
-			System.out.println("O JOGO DUROU " + soma + " HORA(S)");
+		if (ini < fim) {
+			duracao = fim - ini;
 		}
 		else {
-			System.out.println("Boa noite");
+			duracao = 24 -ini + fim;
 		}
-
+		
+		System.out.println("O JOGO DUROU " + duracao + " HORA(S)");
+		sc.close();
 	}
 
 }
