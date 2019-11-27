@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-=======
 import java.util.Locale;
 import java.util.Scanner;
->>>>>>> 65fba2b0b0bfce87c021f902bf02a86824112a2c
 
 public class cond7 {
 
 	public static void main(String[] args) {
-<<<<<<< HEAD
-		// TODO Auto-generated method stub
-=======
-		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
@@ -40,7 +33,7 @@ public class cond7 {
 		}
 		
 		sc.close();
->>>>>>> 65fba2b0b0bfce87c021f902bf02a86824112a2c
+		
 
 	}
 
