@@ -7,18 +7,20 @@ public class exfor04 {
 		Scanner sc = new Scanner(System.in);
 		
 		int n = sc.nextInt();
-		double div = 0;
 		
 		for(int i=0; i<n; i++) {
+			
 			double a = sc.nextInt();
 			double b = sc.nextInt();
 			
 			if (b == 0) {
 				System.out.println("divisao impossivel");
 			}
-			div = a / b;
+			else{
+				double div = a / b;
+				System.out.printf("%.1f%n",div);
+			}
 			
-			System.out.println(div);
 		}
 		
 		sc.close();
