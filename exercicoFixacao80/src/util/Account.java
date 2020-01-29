@@ -1,40 +1,48 @@
 package util;
 
 public class Account {
-	private int conta;
-	private String nome;
-	private double valor;
 	
-	public Account() {
-	}
-	public Account(int conta, String nome, double valor) {
-		this.conta = conta;
-		this.nome = nome;
-		this.valor = valor;
-	}
-	public Account(int conta, String nome) {
-		this.conta = conta;
-		this.nome = nome;
-	}
-	public int getConta() {
-		return conta;
-	}
-	public void setConta(int conta) {
-		this.conta = conta;
-	}
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	public double getValor() {
-		return valor;
-	}
-	public void setValor(double valor) {
-		this.valor = valor;
-	}
-	
-	
+	private int number;
+	private String holder;
+	private double balance;
 
-}
+	public Account(int number, String holder) {
+		this.number = number;
+		this.holder = holder;
+	}
+	public Account(int number, String holder, double initialDeposit) {
+		this.number = number;
+		this.holder = holder;
+		deposit(initialDeposit);
+	}
+	public int getNumber() {
+		return number;
+	}
+	public String getHolder() {
+		return holder;
+	}
+	public void setHolder(String holder) {
+		this.holder = holder;
+	}
+	public double getBalance() {
+		return balance;
+	}
+
+	public void deposit(double amount) {
+		balance += amount;
+	}
+	public void withdraw(double amount) {
+		balance -= amount + 5.0;
+
+	}
+	public String toString() {
+		return "Account " 
+			 + number 
+			 + ", Holder: " 			 
+			 + holder
+			 + ", " 
+			 + " Balance: $ "
+			 + String.format("%.2f", balance);
+	}
+}	
+
